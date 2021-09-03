@@ -134,6 +134,86 @@ h1,h2,h3,h4,h5,h6 {
 	letter-spacing: -0.02em;
 }
 
+.product-category-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-gap: 1.5em;
+}
+
+.product-category-grid div {
+	border: 2px solid #dedede;
+	border-radius: 0.3em;
+	padding: 1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.product-category-grid .product-list-link {
+	border-color: #df6512;
+}
+
+.product-list-link .product-list-link-text {
+	color: #de6512;
+}
+
+.product-list-link {
+	border: 2px solid #dedede;
+	border-radius: 0.3em;
+	padding: 1em;
+	background: none;
+	width: 100%;
+	color: #de6512;
+}
+
+.product-list-link:hover {
+	background-color: #de6512;
+	transition: ease 0.5s;
+	color: #dedede;
+}
+
+.product-list-link .product-list-link-text:hover {
+	color: #dedede;
+	transition: ease 0.5s;
+}
+
+.product-category-grid div h3 {
+	color: #dedede;
+}
+
+.contact-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contact-container form {
+	max-width: 50%;
+	padding: 4rem;
+	background-color: #011f58;
+}
+
+.contact-container form input, .contact-container form textarea, .contact-container form input:focus {
+	background: none;
+	border: none;
+	border-radius: 0px;
+	border-bottom: 2px solid #dedede;
+	color: #dedede;
+	margin-bottom: 2rem;
+}
+
+.contact-container form input::placeholder, .contact-container form textarea::placeholder {
+	color: #dedede;
+}
+
+.contact-container form button {
+	border-radius: 0px;
+	background-color: #df6614;
+	border: none;
+}
+
 textarea{
 	overflow:hidden;	
 }
