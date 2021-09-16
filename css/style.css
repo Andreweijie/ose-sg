@@ -134,6 +134,14 @@ h1,h2,h3,h4,h5,h6 {
 	letter-spacing: -0.02em;
 }
 
+.backdrop {
+	background-color:rgba(0, 0, 0, 0.4);
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+}
+
 .product-category-grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
