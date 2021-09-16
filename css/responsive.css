@@ -1196,6 +1196,7 @@
 	}
 	.tp-caption .text {
 		padding: 1em;
+		font-size: 1.3em;
 	}
 	.tp-caption {
 		text-align: center;
@@ -1203,5 +1204,8 @@
 	.tp-caption .link-box {
 		display: flex;
 		justify-content: center;
+	}
+	.link-box a {
+		margin: 0px !important;
 	}
 }
