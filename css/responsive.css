@@ -1156,5 +1156,38 @@
 
 
 @media only screen and (max-width: 479px) {
-	
+	.landing-section {
+		flex-direction: column-reverse;
+	}
+	.landing-section div {
+		width: 100%;
+	}
+	.with-pic {
+		flex-direction: column;
+	}
+	.landing-section div img {
+		margin: 2em 0px 2em 0px;
+	}
+	.landing-section .image-frame {
+	padding: 1em;
+}
+	.services-section {
+		padding-bottom: 0px;
+	}
+	.product-category-grid {
+		grid-template-columns: 1fr ;
+	}
+	.product-category-grid div {
+		min-height: 100px;
+	}
+	#contactForm {
+		max-width: 100%;
+	}
+	#contactForm button {
+		width: 100%;
+	}
+	.product-list-grid {
+		grid-template-columns: 1fr;
+		margin: 0 1em 0 1em;
+	}
 }
