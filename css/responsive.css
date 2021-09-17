@@ -1156,6 +1156,10 @@
 
 
 @media only screen and (max-width: 479px) {
+	.main-header .logo-outer .logo img{
+	
+	max-width:280px;
+}
 	.landing-section {
 		flex-direction: column-reverse;
 	}
@@ -1178,7 +1182,11 @@
 		grid-template-columns: 1fr ;
 	}
 	.product-category-grid div {
-		min-height: 100px;
+		min-height: 80px;
+	}
+
+	.product-category-grid div h3 {
+		font-size: 20px;
 	}
 	#contactForm {
 		max-width: 100%;
@@ -1191,7 +1199,7 @@
 		margin: 0 1em 0 1em;
 	}
 	.tp-caption h2 {
-		padding: 1em;
+		padding: 0.2em;
 		font-size: 3em;
 	}
 	.tp-caption .text {
