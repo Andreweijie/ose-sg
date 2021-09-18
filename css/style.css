@@ -138,6 +138,31 @@ h1,h2,h3,h4,h5,h6 {
 	display: none;
 }
 
+.about-section p {
+ margin-top: 2rem;
+ max-width: 1210px;
+ line-height: 2;
+}
+.about-section .sec-title {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+.about-section div img {
+	margin-bottom: 2rem;
+}
+
+.backdrop2 {
+	background-color:rgba(0, 0, 0, 0.3);
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+}
+
+
 .backdrop {
 	background-color:rgba(0, 0, 0, 0.3);
 	height: 100%;
@@ -1069,6 +1094,10 @@ img{
 	position:relative;
 	display:inline-block;
 	max-width:400px;
+}
+
+.services-block .inner-box .text {
+	min-height: 140px;
 }
 
 .main-header .header-upper .nav-outer{
