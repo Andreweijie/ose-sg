@@ -33,20 +33,7 @@
 
         <header class="main-header">
             <!--Header Top-->
-            <div class="header-top">
-                <div class="auto-container clearfix">
-                    <div class="top-left clearfix">
-                        <div class="text">Your trusted supplier of high-quality specialty tools for the global oil and
-                            gas industry</div>
-                    </div>
-                    <div class="top-right clearfix">
-                        <!-- Info List -->
-                        <ul class="info-list clearfix">
 
-                        </ul>
-                    </div>
-                </div>
-            </div>
             <!-- End Header Top -->
 
             <!-- Header Upper -->
@@ -128,7 +115,8 @@
         <!-- Quote Section -->
         <div class="sec-title contact-container">
             <h2>Contact Us!</h2>
-            <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+            <form method="POST" id="contactForm" name="contactForm" class="contactForm"
+                onsubmit="event.preventDefault(); sendContactForm();">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
@@ -153,7 +141,8 @@
                     </div>
                     <div class="col-md-12">
                         <div class="form-group">
-                            <button type="submit" value="Send Message" class="btn btn-primary">Send Message</button>
+                            <button type="submit" value="Send Message" class="btn btn-primary" id="sendmsg">Send
+                                Message</button>
                             <div class="submitting"></div>
                         </div>
                     </div>
@@ -190,9 +179,9 @@
                                         <div class="logo">
                                             <a href="index.html"><img src="images/gallery/Asset 1.png" alt="" /></a>
                                         </div>
-                                        <div class="text">We provide quality products and innovative solutions to your
-                                            tooling and equipment challenges.</div>
-                                        <a href="#aboutus" class="theme-btn btn-style-four">About Us</a>
+                                        <div class="text">We specialize in Drilling, Fishing, Milling, P&A & Specialty
+                                            Tools.</div>
+                                        <!-- <a href="#aboutus" class="theme-btn btn-style-four">About Us</a> -->
                                     </div>
                                 </div>
 
@@ -243,6 +232,7 @@
                                                 <div class="post-date">January 15, 2024</div>
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
 
@@ -254,7 +244,7 @@
                                         <ul>
                                             <li>47 Gul Drive, Singapore 629494</li>
                                             <!-- <li><a href="#">info@ose-sg.com</a></li> -->
-                                            <li>Mon to Sat: 8.30 am to 6.00 pm</li>
+                                            <li>Mon to Fri: 9.00 am to 6.00 pm</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -269,19 +259,18 @@
                 <div class="footer-bottom">
                     <div class="clearfix">
                         <div class="pull-left">
-                            <div class="copyright">&copy; 2020 Oil Field Supplies & Equipment Pte Ltd. All rights
-                                reserved.</div>
+                            <div class="copyright">&copy; 2021 Oil Field Supplies & Equipment Pte Ltd.</div>
                         </div>
                         <div class="pull-right">
                             <!-- Social Links -->
                             <ul class="social-links">
                                 <!--
-							<li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-							<li><a href="#"><span class="fab fa-google-plus-g"></span></a></li>
-							<li><a href="#"><span class="fab fa-twitter"></span></a></li>
-							<li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
-							<li><a href="#"><span class="fab fa-youtube"></span></a></li>
-							-->
+        							<li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+        							<li><a href="#"><span class="fab fa-google-plus-g"></span></a></li>
+        							<li><a href="#"><span class="fab fa-twitter"></span></a></li>
+        							<li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
+        							<li><a href="#"><span class="fab fa-youtube"></span></a></li>
+        							-->
                             </ul>
                         </div>
                     </div>
@@ -321,6 +310,47 @@
     <script src="js/wow.js"></script>
     <script src="js/appear.js"></script>
     <script src="js/script.js"></script>
+    <script>
+
+        function sendContactForm() {
+
+            document.getElementById("sendmsg").innerHTML = "Submitting...";
+
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let subject = document.getElementById('subject').value;
+            let message = document.getElementById('message').value;
+
+            let formData = {
+                name,
+                email,
+                subject,
+                message
+            }
+
+            alert("Message sent!")
+
+            fetch(
+                "https://us-central1-ose-sg.cloudfunctions.net/widgets/send-form-info",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(formData),
+                }
+            )
+                .then((res) => res.json())
+                .then((data) => {
+                    if (data.message) {
+                        console.log("Message sent!")
+                        document.getElementById("sendmsg").innerHTML = "Send Message";
+                    } else {
+                        console.log("failed")
+                    }
+                });
+        }
+    </script>
 </body>
 
 </html>
