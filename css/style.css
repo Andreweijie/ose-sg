@@ -3763,6 +3763,7 @@ img{
 	position:relative;
 	color:#cccccc;
 	font-size:16px;
+	cursor: auto;
 	-webkit-transition:all 300ms ease;
 	-ms-transition:all 300ms ease;
 	-o-transition:all 300ms ease;
@@ -3771,8 +3772,8 @@ img{
 }
 
 .footer-service-list li a:hover{
-	color:#ffffff;
-	text-decoration:underline;
+	/*color:#ffffff;*/
+	text-decoration:none;
 }
 
 
