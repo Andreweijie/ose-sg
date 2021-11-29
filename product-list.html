@@ -62,7 +62,7 @@
                                 <div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
                                     <ul class="navigation clearfix">
                                         <li><a href="index.html">Home</a></li>
-                                        <li><a href="about.html">About us</a></li>
+                                        <li><a href="about.html">About/Gallery</a></li>
                                         <li><a href="product-list.html">Product List</a></li>
                                         <li><a href="accreds.html">Accreditations</a></li>
                                     </ul>
@@ -100,7 +100,7 @@
                             <div class="navbar-collapse show collapse clearfix">
                                 <ul class="navigation clearfix">
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About us</a></li>
+                                    <li><a href="about.html">About/Gallery</a></li>
                                     <li><a href="product-list.html">Product List</a></li>
                                     <li><a href="accreds.html">Accreditations</a></li>
                                 </ul>
@@ -113,18 +113,6 @@
         <!-- End Main Header -->
         <section class="product-list-page">
             <div class="product-list-grid">
-                <div class="product-list-grid-item">
-                    <h3>P&A Tools</h3>
-                    <hr>
-                    <ul>
-                        <li>Hydraulic Casing Cutter</li>
-                        <li>Non-Rotate Sleeve Stabilizers</li>
-                        <li>Space-out Assembly</li>
-                        <li>Marine Wellhead Swivel</li>
-                        <li>Wellhead Recover Tool</li>
-                        <li>Spears-Refer Internal Engagement Tools</li>
-                    </ul>
-                </div>
                 <div class="product-list-grid-item">
                     <h3>Internal & External Engagement Tools</h3>
                     <hr>
@@ -158,6 +146,19 @@
                     </ul>
                 </div>
                 <div class="product-list-grid-item">
+                    <h3>P&A Tools</h3>
+                    <hr>
+                    <ul>
+                        <li>Hydraulic Casing Cutter</li>
+                        <li>Non-Rotate Sleeve Stabilizers</li>
+                        <li>Space-out Assembly</li>
+                        <li>Marine Wellhead Swivel</li>
+                        <li>Wellhead Recover Tool</li>
+                        <li>Spears-Refer Internal Engagement Tools</li>
+                    </ul>
+                </div>
+                <hr class="invis">
+                <div class="product-list-grid-item">
                     <h3>Washover Equipment</h3>
                     <hr>
                     <ul>
@@ -172,6 +173,7 @@
                         <li>Single joint elevator, Tong Bushing</li>
                     </ul>
                 </div>
+                
                 <div class="product-list-grid-item">
                     <h3>Mills and Rotary Shoes</h3>
                     <hr>
@@ -187,19 +189,6 @@
                         <li>Whipstock Mill</li>
                         <li>Tieback Mill</li>
                         <li>PBR Polish Mill</li>
-                    </ul>
-                </div>
-                <div class="product-list-grid-item">
-                    <h3>Junk Retriever Tools</h3>
-                    <hr>
-                    <ul>
-                        <li>Jet Basket</li>
-                        <li>Globe Basket</li>
-                        <li>RCJB - Standard &amp; Full Flow</li>
-                        <li>String Magnet</li>
-                        <li>Fishing Magnet</li>
-                        <li>Washpipe Boot Basket</li>
-                        <li>Boot Basket - Fixed skirt &amp; removable skirt</li>
                     </ul>
                 </div>
                 <div class="product-list-grid-item">
@@ -219,6 +208,20 @@
                     </ul>
                 </div>
                 <div class="product-list-grid-item">
+                    <h3>Junk Retriever Tools</h3>
+                    <hr>
+                    <ul>
+                        <li>Jet Basket</li>
+                        <li>Globe Basket</li>
+                        <li>RCJB - Standard &amp; Full Flow</li>
+                        <li>String Magnet</li>
+                        <li>Fishing Magnet</li>
+                        <li>Washpipe Boot Basket</li>
+                        <li>Boot Basket - Fixed skirt &amp; removable skirt</li>
+                    </ul>
+                </div>
+                
+                <div class="product-list-grid-item">
                     <h3>Casing Repair Tools</h3>
                     <hr>
                     <ul>
@@ -236,14 +239,6 @@
                     </ul>
                 </div>
                 <div class="product-list-grid-item">
-                    <h3>Drilling Tools</h3>
-                    <hr>
-                    <ul>
-                        <li>Integral Blade Stabilizer</li>
-                        <li>Double Clutch Key Seat Wiper</li>
-                    </ul>
-                </div>
-                <div class="product-list-grid-item">
                     <h3>Packer Milling & Retrieving Tools</h3>
                     <hr>
                     <ul>
@@ -254,6 +249,17 @@
                         <li>Slickbore Packer Spear</li>
                     </ul>
                 </div>
+                <div class="product-list-grid-item">
+                    <h3>Drilling Tools</h3>
+                    <hr>
+                    <ul>
+                        <li>Integral Blade Stabilizer</li>
+                        <li>Double Clutch Key Seat Wiper</li>
+                    </ul>
+                </div>
+                
+              
+                
             </div>
         </section>
         <!-- Quote Section -->
@@ -418,6 +424,7 @@
     <script src="js/jquery.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <!--Revolution Slider-->
     <script src="plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
     <script src="plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
@@ -439,6 +446,17 @@
     <script src="js/wow.js"></script>
     <script src="js/appear.js"></script>
     <script src="js/script.js"></script>
+
+    <script>
+        $('.product-list-grid').masonry({
+                // options
+                itemSelector: '.product-list-grid-item',
+                columnWidth: 400,
+                gutter: 10,
+                /* horizontalOrder: true, */
+                fitWidth: true
+            });
+    </script>
 </body>
 
 </html>
