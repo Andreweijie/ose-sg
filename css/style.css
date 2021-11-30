@@ -148,6 +148,11 @@ h6 {
   max-width: 1210px;
   line-height: 2;
 }
+.about-banner img {
+    height: auto;
+    max-width: 1210px;
+  }
+}
 .about-section,
 .gallery-section .sec-title {
   display: flex;
@@ -159,17 +164,39 @@ h6 {
   margin-bottom: 2rem;
 }
 
+.about-section {
+  display:  flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .gallery-section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin-bottom: 1200px;
+}
+
+/* .gallery-section h2 {
+  text-align: center;
+} */
+
+.gallery-section .sec-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .gal-row {
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
+}
+
+.subpoint {
+  margin-left: 2em !important;
+  list-style-type: circle !important;
 }
 
 /* Create four equal columns that sits next to each other */
@@ -188,7 +215,7 @@ h6 {
 
 .caption-box {
   height: 13.6%;
-  background-color: #001e57;
+  /* background-color: #001e57; */
   color: #fff;
   display: flex;
   justify-content: center;
@@ -197,6 +224,34 @@ h6 {
   padding: 0.5rem;
   text-align: center;
   font-family: "Lato", Courier, monospace;
+}
+
+.cap1 {
+  background-color: #000048;
+}
+
+.cap2 {
+  background-color: #011f58;
+}
+
+.cap3 {
+  background-color: #166495;
+}
+
+.cap4 {
+  background-color: #5b626f;
+}
+
+.cap5 {
+  background-color: #06a490;
+}
+
+.cap6 {
+  background-color: #e3803d;
+}
+
+.cap7 {
+  background-color: #030e22;
 }
 
 .gallery-box {
