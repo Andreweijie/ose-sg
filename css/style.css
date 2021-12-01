@@ -189,9 +189,10 @@ h6 {
 }
 
 .gal-row {
+  max-width: 1210px;
   display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .subpoint {
@@ -201,21 +202,24 @@ h6 {
 
 /* Create four equal columns that sits next to each other */
 .gal-column {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+}
+
+.cap-header {
+  grid-column: 1/span 2;
 }
 
 .gal-column img,
 .gal-column .caption-box {
-  margin-top: 8px;
   vertical-align: middle;
   width: 100%;
 }
 
 .caption-box {
   height: 13.6%;
-  /* background-color: #001e57; */
+  background-color: #166495;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -224,34 +228,14 @@ h6 {
   padding: 0.5rem;
   text-align: center;
   font-family: "Lato", Courier, monospace;
+  height: 100%;
+  line-height: 1.5;
 }
 
-.cap1 {
-  background-color: #000048;
-}
-
-.cap2 {
-  background-color: #011f58;
-}
-
-.cap3 {
-  background-color: #166495;
-}
-
-.cap4 {
-  background-color: #5b626f;
-}
-
-.cap5 {
-  background-color: #06a490;
-}
-
-.cap6 {
-  background-color: #e3803d;
-}
-
-.cap7 {
-  background-color: #030e22;
+.cap-logo {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
 }
 
 .gallery-box {
