@@ -205,6 +205,20 @@ h6 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1em;
+  position: relative;
+}
+
+.arrow1 {
+  position: absolute;
+  width: 22rem !important;
+  top: 18%;
+  left: 46%;
+}
+.arrow2 {
+  position: absolute;
+  width: 32rem !important;
+  top: 75%;
+  left: 24%;
 }
 
 .cap-header {
@@ -236,6 +250,10 @@ h6 {
   display: flex;
   flex-direction: column;
   padding: 4rem;
+}
+
+.cap-logo img {
+  margin-bottom: 2rem;
 }
 
 .gallery-box {
