@@ -190,6 +190,7 @@ h6 {
 
 .gal-row {
   max-width: 1210px;
+  width: 80vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -210,15 +211,16 @@ h6 {
 
 .arrow1 {
   position: absolute;
-  width: 22rem !important;
-  top: 18%;
-  left: 46%;
+  width: 27rem !important;
+  transform: rotate(5deg);
+  top: 17%;
+  left: 41%;
 }
 .arrow2 {
   position: absolute;
-  width: 32rem !important;
-  top: 75%;
-  left: 24%;
+  width: 36rem !important;
+  top: 74%;
+  left: 19%;
 }
 
 .cap-header {
@@ -317,11 +319,20 @@ h6 {
   max-width: 100%;
 }
 
+.product-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 .product-list-page {
   display: flex;
   justify-content: center;
   padding-bottom: 2em;
   padding-top: 2em;
+  max-width: 1210px;
+  width: 80%;
 }
 
 .product-list-grid-item {
@@ -503,6 +514,8 @@ li {
   min-height: 80vh;
   display: flex;
   align-items: center;
+  width: 80%;
+  max-width: 1210px;
 }
 
 .landing-section .image-frame {
@@ -533,7 +546,11 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+}
+
+.landing-section-text.right-aligned {
+  align-items: flex-end;
 }
 .landing-section-text h2,
 .landing-section-text span {
